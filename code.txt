@@ -1,0 +1,48 @@
+dump();
+dump(x);
+dump(7+3, 7-3, 7*3, 7/3, 7%3);
+dump(1==2, 1!=2, 1<2, 1>2, 1<=2, 1>=2);
+dump(1==1, 1!=1, 1<1, 1>1, 1<=1, 1>=1);
+dump(2==1, 2!=1, 2<1, 2>1, 2<=1, 2>=1);
+dump(1==null, 1==true, 1==false);
+dump(true?10:null);
+dump(16, true?true?1:2:true?3:4);
+dump(false && 1, true&&false, true&&true);
+dump(true || 1, false||false, false||true);
+while (true){break;}
+while (true){while(true){break;}break;}
+p = 10;
+dump(p)()(11)()(12);
+dump();
+x = 5;
+while (x < 6) {
+	(dump)(1);
+	break;
+	dump(44);
+}
+while (0 < x) {
+	dump(x);
+    x = x - 1;
+    p = 6;
+    while (true) {
+		dump(true);
+		break;
+		dump(false);
+	}
+	if (x == 1) {
+		break;
+	}
+}
+dump(4 + 4);
+dump(x);
+dump(dump(x));
+if (true) {
+	dump(x, -y, z + 2);
+}
+i = 0;
+s = 0;
+while (i < 100000){
+	s = s + i*i;
+	i = i + 1;
+}
+dump(s);

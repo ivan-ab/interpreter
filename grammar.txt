@@ -1,0 +1,55 @@
+*Program:
+    Statement*
+Statement:
+    ExpressionStatement
+	Assignment
+	If
+	While
+	Break
+ExpressionStatement:
+    Expression ';'
+Assignment:
+    Identifier '=' Expression ';'
+If:
+    'if' '(' Expression ')' Block
+While:
+    'while' '(' Expression ')' Block
+Block:
+    '{' Statement* '}'
+Break:
+    'break' ';'
+Expession:
+    Conditional
+Conditional:
+	LocicalOr "?" Expression ":" Expression
+	LocicalOr
+LocicalOr:
+	LocicalOr "||" LogicalAnd
+	LogicalAnd
+LogicalAnd:
+	LogicalAnd "&&" Equality
+	Equality
+Equality:
+    Equality ("=="|"!=") Relational
+    Relational
+Relational:
+    Relational ("<"|">"|"<="|">=") Additive
+    Additive
+Additive:
+    Additive ("+"|"-") Multiplicative
+    Multiplicative
+Multiplicative:
+    Multiplicative ("*"|"/"|"%") Unary
+    Unary
+Unary:
+    ("-"|"!") Unary
+    Call
+Call:
+    Call '(' Parameters? ')'
+    Primary
+Primary:
+    '(' Expression ')'
+    Number
+    Identifier
+Parameters:
+    Expression (',' Expression)*
